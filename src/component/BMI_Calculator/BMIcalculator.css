@@ -1,38 +1,43 @@
 /* Set the background color and full width/height for the entire body */
-*{
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 body {
-  background-color: #243642;  /* Light cyan background color */
-  font-family: 'Arial', sans-serif;
+  background-color: #243642; /* Light cyan background color */
+  font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
-  display: flex;  /* Using flexbox to center the container */
-  justify-content: center;  /* Center horizontally */
-  align-items: center;  /* Center vertically */
-  height: 100vh;  /* Full height of the viewport */
-  width: 100%;  /* Full width of the viewport */
-  box-sizing: border-box;  /* Box sizing for all elements */
+  display: flex; /* Using flexbox to center the container */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full height of the viewport */
+  width: 100%; /* Full width of the viewport */
+  box-sizing: border-box; /* Box sizing for all elements */
 }
 
 /* Styling the main container for the BMI calculator */
 .container {
   width: 100%;
-  max-width: 450px;  /* Max width of the BMI calculator form */
+  max-width: 450px; /* Max width of the BMI calculator form */
+  min-height: 400px; /* Minimum height to prevent shrinking */
   padding: 30px;
-  border: 1px solid #ccc;  /* Light border color */
-  border-radius: 8px;  /* Rounded corners */
-  background-color: #E2F1E7;  /* White background for the form */
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);  /* Subtle shadow for the form */
+  border: 1px solid #ccc; /* Light border color */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #E2F1E7; /* White background for the form */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for the form */
   text-align: center;
-  box-sizing: border-box;  /* Include padding in width/height calculation */
+  box-sizing: border-box; /* Include padding in width/height calculation */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute space evenly */
+  overflow: hidden;
 }
 
 /* Header styling */
 h2 {
   margin-bottom: 20px;
   font-size: 26px;
-  color: #333;  /* Dark color for the heading */
+  color: #333; /* Dark color for the heading */
   font-weight: bold;
 }
 
@@ -46,26 +51,26 @@ input {
   width: 100%;
   padding: 12px;
   margin-top: 5px;
-  border: 1px solid #ccc;  /* Light border color */
+  border: 1px solid #ccc; /* Light border color */
   border-radius: 4px;
   font-size: 16px;
-  box-sizing: border-box;  /* Ensure padding doesn't affect width */
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
 
 /* Styling the calculate button */
 .calculate-bmi {
-  background-color: #59798e;  /* Green background color */
+  background-color: #59798e; /* Green background color */
   color: white;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  width: 100%;  /* Button spans the full width */
+  width: 100%; /* Button spans the full width */
   font-size: 16px;
   margin-top: 10px;
 }
 
-.calculate-bmi:hover{
+.calculate-bmi:hover {
   background-color: #629584;
 }
 
@@ -73,11 +78,13 @@ input {
 h3 {
   margin-top: 20px;
   font-size: 22px;
-  color: #333;  /* Dark text color */
+  width: 400px;
+  color: #333; /* Dark text color */
 }
 
 h4 {
   margin-top: 5px;
+  width: 100%;
   font-size: 18px;
-  color: #555;  /* Lighter gray color for BMI category */
+  color: #555; /* Lighter gray color for BMI category */
 }
